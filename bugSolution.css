@@ -1,0 +1,27 @@
+Several approaches can solve this specificity issue:
+
+1. **Increase Specificity:** Make the `div > p` selector even more specific by adding additional selectors, for example: `div.container > p`.
+
+2. **Use !important (Not Recommended):** Use the `!important` flag, but this is generally considered bad practice and should be avoided unless absolutely necessary.
+
+3. **Order Matters:** Ensure the `div > p` rule appears *after* the `div p` rule in the stylesheet. However, relying on order is not a clean solution.
+
+4. **ID Selectors:**  Use an ID selector, which has the highest specificity.
+
+The `bugSolution.css` file demonstrates a solution using more specific class selectors:
+
+```css
+div p {
+  color: blue;
+}
+
+div > p {
+  color: red;
+}
+
+div.container > p {
+  color: red; /*This is more specific*/
+}
+```
+
+Choose the solution that best fits your project's structure and coding style.
