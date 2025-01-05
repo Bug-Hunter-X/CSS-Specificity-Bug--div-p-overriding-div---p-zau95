@@ -1,0 +1,13 @@
+The following CSS code snippet demonstrates an unusual issue related to the specificity of CSS selectors.  Notice how the `div p` selector seems to override the more specific `div > p` selector, even though `div > p` should have higher specificity due to its child combinator.
+
+```css
+div p {
+  color: blue;
+}
+
+div > p {
+  color: red;
+}
+```
+
+This unexpected behavior might arise due to the presence of other CSS rules or due to how the browser handles specificity in complex scenarios involving many selectors.
